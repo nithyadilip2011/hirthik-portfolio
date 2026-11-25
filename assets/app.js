@@ -1,7 +1,7 @@
 (() => {
   const CAP = 8, REFILL_MS = 1000;
   const bucket = document.getElementById('bucket'), log = document.getElementById('log');
-  const status = document.getElementById('status'), btn = document.getElementById('send');
+  const btn = document.getElementById('send');
   if (!bucket || !log || !btn) return;
   let tokens = 3, n = 0, lastRefill = Date.now(), announced = 0;
   for (let i = 0; i < CAP; i++) bucket.appendChild(Object.assign(document.createElement('div'), {className: 'tok'}));

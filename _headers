@@ -1,18 +1,25 @@
+# Security headers apply to every path.
 /*
   X-Content-Type-Options: nosniff
   X-Frame-Options: DENY
   Referrer-Policy: strict-origin-when-cross-origin
   Permissions-Policy: camera=(), microphone=(), geolocation=()
   Content-Security-Policy: default-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'self'; font-src 'self'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'
+
+# Cache-Control is set per path with no overlap, so values are never merged.
+/
+  Cache-Control: public, max-age=0, must-revalidate
+
+/index.html
   Cache-Control: public, max-age=0, must-revalidate
 
 /assets/fonts/*
   Cache-Control: public, max-age=31536000, immutable
 
-/assets/*.css
+/assets/style.css
   Cache-Control: public, max-age=3600
 
-/assets/*.js
+/assets/app.js
   Cache-Control: public, max-age=3600
 
 /favicon.svg
