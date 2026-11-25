@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hirthik Kumar G S | Backend and data engineer in Chennai</title>
+<meta name="description" content="Hirthik Kumar G S is a backend and data engineer in Chennai working with Python, PostgreSQL, Redis, Docker and AWS. Projects, background and contact.">
+<meta name="theme-color" content="#0D1526">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Hirthik Kumar G S | Backend and data engineer">
+<meta property="og:description" content="Python, PostgreSQL, Redis, Docker and AWS. Try the token bucket rate limiter demo and see the projects.">
+<meta property="og:image" content="og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Hirthik Kumar G S | Backend and data engineer">
+<meta name="twitter:description" content="Python, PostgreSQL, Redis, Docker and AWS. Try the token bucket rate limiter demo and see the projects.">
+<meta name="twitter:image" content="og-image.png">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preload" href="assets/fonts/BricolageGrotesque.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="wrap">
+  <header>
+    <a class="name" href="#top">Hirthik Kumar G S</a>
+    <nav aria-label="Primary">
+      <a class="hide-sm" href="#projects">Projects</a>
+      <a class="hide-sm" href="#next">Building next</a>
+      <a class="hide-sm" href="#about">About</a>
+      <a class="btn" href="Hirthik_Kumar_G_S_Resume.pdf" download>Download resume</a>
+    </nav>
+  </header>
+
+  <main id="main">
+  <div class="hero" id="top">
+    <div>
+      <h1>I build the backend parts users never see and always notice.</h1>
+      <p class="lede">Backend and data engineer in Chennai. Python, PostgreSQL, Redis, Docker and AWS. Available to join immediately.</p>
+      <div class="cta"><a class="p" href="#projects">See the projects</a><a class="s" href="mailto:hirthik100605@gmail.com">Email me</a></div>
+    </div>
+    <section class="demo" aria-labelledby="demo-title">
+      <div class="demo-top"><b id="demo-title">Try my rate limiter</b><span>token bucket, 8 capacity, 1 per second</span></div>
+      <p>One of four algorithms from my Rate Limiter API. Send requests faster than the bucket refills and watch it push back. This runs in your browser; it is a small simulation, not the API itself.</p>
+      <div class="bucket" id="bucket" role="img" aria-label="Bucket with 3 of 8 tokens"></div>
+      <button class="send" id="send" type="button">Send a request</button>
+      <p class="hint">Press the button, or Enter or Space when it has focus.</p>
+      <div class="log" id="log" role="log" aria-live="polite" aria-relevant="additions" aria-label="Request log"></div>
+    </section>
+  </div>
+
+  <section id="projects" aria-labelledby="h-projects">
+    <h2 id="h-projects">Projects</h2>
+    <p class="sub">Built and tested. Source is on my <a href="https://github.com/hirthikk-bwd">GitHub profile</a>.</p>
+    <div class="grid">
+      <article class="card w4"><div class="status">Deployed on AWS</div><h3>Job Tracker REST API</h3><p>Multi-user CRUD API with JWT auth and bcrypt-hashed passwords, running on EC2 with RDS PostgreSQL in Docker behind gunicorn. Queries are scoped to their owner and return 404 instead of 403, so resource IDs cannot be enumerated. 8 pytest tests cover auth and CRUD flows.</p><div class="stack">Flask / SQLAlchemy / PostgreSQL / Docker / gunicorn / AWS</div></article>
+      <article class="card w2"><div class="status">Built</div><h3>Rate Limiter API</h3><p>Four algorithms (fixed window, sliding window log, sliding window counter, token bucket) as interchangeable classes behind one interface, state held in Redis. Tested against fakeredis.</p><div class="stack">Flask / Redis / fakeredis</div></article>
+      <article class="card w2"><div class="status">Built</div><h3>URL Shortener API</h3><p>Base62 short codes resolved through a cache-aside layer: Redis first, PostgreSQL on a miss, 1-hour TTL. Click analytics endpoint per code.</p><div class="stack">Flask / PostgreSQL / Redis</div></article>
+      <article class="card w2"><div class="status">Built</div><h3>CLI Log Analyzer</h3><p>Parses Nginx and Apache logs, reports top IPs, endpoints and error rates, and alerts on error spikes with a sliding window. Exports JSON and CSV.</p><div class="stack">Python / rich / pytest</div></article>
+      <article class="card w2"><div class="status">Final year project</div><h3>Pneumonia detection</h3><div class="big">98.40%</div><p>Binary accuracy for a DenseNet121 chest X-ray classifier. Three-class accuracy is 81.41%.</p><div class="stack">PyTorch / OpenCV / Flask</div></article>
+    </div>
+  </section>
+
+  <section id="next" aria-labelledby="h-next">
+    <h2 id="h-next">Building next</h2>
+    <p class="sub">Planned work. Nothing here is built yet. The air quality pipeline is first, because it is the quickest to demo.</p>
+    <div class="grid">
+      <article class="card plan w3"><div class="status plan">Planned, first up</div><h3>India Air Quality Data Pipeline</h3><p>Scheduled ingestion of air quality readings with incremental loads and tested transformations.</p><div class="stack">Airflow / dbt / PostgreSQL / S3</div></article>
+      <article class="card plan w3"><div class="status plan">Planned</div><h3>RecruitFlow</h3><p>Multi-user hiring workflow with role-based access, an audit trail, async notifications and idempotent requests.</p><div class="stack">FastAPI / PostgreSQL / Redis / Celery / Docker / AWS</div></article>
+      <article class="card plan w3"><div class="status plan">Planned</div><h3>OpsPulse</h3><p>Log ingestion with dedupe, incremental loads and data-quality checks, with a Streamlit view on top.</p><div class="stack">Python / Airflow / PostgreSQL / S3 / Streamlit</div></article>
+      <article class="card plan w3"><div class="status plan">Planned</div><h3>TalentDocs</h3><p>Document Q&amp;A with permissioned retrieval, source-linked answers, abstention when evidence is thin, and an evaluation set.</p><div class="stack">FastAPI / pgvector / LLM API</div></article>
+    </div>
+  </section>
+
+  <section id="about" aria-labelledby="h-about">
+    <h2 id="h-about">About</h2>
+    <p class="sub">I finished my engineering degree in July 2026 and have built four backend services in Python since, plus a final year ML project. I am looking for a backend or data engineer role.</p>
+    <div class="grid">
+      <article class="card w3"><h3>Experience</h3><p><b>Associate Recruiter, Cogent Infotech</b><br>Jul 2026 to Oct 2026. US-based IT staffing firm. Screened candidates for engineering and IT roles against client technical requirements and coordinated placements with US clients from submission to offer.</p></article>
+      <article class="card w3"><h3>Education</h3><p><b>B.E. Electronics and Communication Engineering</b><br>Sathyabama Institute of Science and Technology, Chennai. July 2026, CGPA 7.2.</p></article>
+      <article class="card w3"><h3>Skills</h3>
+        <dl class="skills"><dt>Languages</dt><dd>Python, SQL</dd><dt>Backend</dt><dd>Flask, SQLAlchemy, REST API design, JWT, Flask-Migrate, gunicorn</dd><dt>Databases</dt><dd>PostgreSQL, Redis</dd><dt>Cloud and DevOps</dt><dd>AWS (EC2, RDS, IAM), Docker, docker-compose, Git</dd><dt>Testing</dt><dd>pytest, fakeredis</dd><dt>Data and ML</dt><dd>PyTorch, OpenCV</dd></dl></article>
+      <article class="card w3"><h3>Certifications</h3><p><b>Claude Academy (Anthropic), Nov 2026</b><br>Claude 101, Claude Platform 101, Claude Code 101, Claude Code in Action, Introduction to Model Context Protocol.</p></article>
+    </div>
+  </section>
+  </main>
+
+  <footer id="contact">
+    <div><b>Hirthik Kumar G S</b><br>Chennai, India</div>
+    <ul>
+      <li><a href="mailto:hirthik100605@gmail.com">hirthik100605@gmail.com</a></li>
+      <li><a href="https://github.com/hirthikk-bwd" rel="noopener">github.com/hirthikk-bwd</a></li>
+      <li><a href="https://www.linkedin.com/in/hirthikk08" rel="noopener">linkedin.com/in/hirthikk08</a></li>
+    </ul>
+  </footer>
+</div>
+<script src="assets/app.js" defer></script>
+</body>
+</html>
