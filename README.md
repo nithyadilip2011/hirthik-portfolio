@@ -29,7 +29,7 @@ Nothing in the repo references an account, so moving it means re-pointing two th
 
 1. GitHub: create or fork the repo under the new account, then `git remote set-url origin https://github.com/<new-account>/hirthik-portfolio.git` and `git push -u origin main`.
 2. Cloudflare: in the new account, create a Pages project from that repo with the settings above. Add the custom domain there if you have one.
-3. The canonical and social-preview URLs in `index.html` point at `https://hirthik-portfolio.pages.dev`. Change them if you move to another account or a custom domain.
+3. The canonical and social-preview URLs in `index.html` point at `https://hirthik.pages.dev`. Change them if you move to another account or a custom domain.
 
 ## Content notes
 
